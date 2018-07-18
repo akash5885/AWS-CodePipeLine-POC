@@ -1,2 +1,2 @@
 #!/bin/sh
-ps -ef | grep AWS-CodePipeline-POC | grep -v grep | awk '{print $2}' | xargs sudo kill
+export pid=`ps aux | grep process_name | awk 'NR==1{print $2}' | cut -d' ' -f1`;kill -9 $pid
