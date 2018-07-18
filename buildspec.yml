@@ -14,8 +14,8 @@ phases:
   post_build:
     commands:
       - echo Build completed on `date`
-      - zip -r AWS-CodePipeline-POC.zip target/AWS-CodePipeline-POC.jar appspec.yml restart.sh
+      - zip -r AWS-CodePipeline-POC.zip target/AWS-CodePipeline-POC.war appspec.yml restart.sh service.sh
       - aws s3 cp AWS-CodePipeline-POC.zip s3://akash.codedeploy.com/
 artifacts:
   files:
-    - target/AWS-CodePipeline-POC.jar
+    - target/AWS-CodePipeline-POC.war

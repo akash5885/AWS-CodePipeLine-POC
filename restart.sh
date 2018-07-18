@@ -1,5 +1,5 @@
 #!/bin/bash
-curl -X POST localhost:8080/shutdown
-java -jar /opt/awscodepipeline/AWS-CodePipeline-POC.jar
+sh /opt/awscodepipeline/service.sh stop
+sh /opt/awscodepipeline/service.sh start
 
 

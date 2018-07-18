@@ -1,7 +1,9 @@
 version: 0.0
 os: linux
 files:
-  - source: target/AWS-CodePipeline-POC.jar
+  - source: target/AWS-CodePipeline-POC.war
+    destination: /opt/awscodepipeline
+  - source: service.sh
     destination: /opt/awscodepipeline
 
 hooks:
