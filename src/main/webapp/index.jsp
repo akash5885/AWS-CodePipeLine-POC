@@ -7,7 +7,7 @@
 <body>
 	<font color="red">${errorMessage}</font>
 	<form action="/login" method="post">
-		Name11555666 : <input type="text" name="name" />
+		Name22 : <input type="text" name="name" />
 		<input type="submit" />
 	</form>
 </body>
