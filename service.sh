@@ -13,14 +13,14 @@
 ### END INIT INFO
 
 SERVICE_NAME=AWS-CodePipeline-POC
-PATH_TO_JAR=/Users/akash/Documents/projects/AWS-CodePipeLine-POC/target/AWS-CodePipeline-POC.war
+PATH_TO_JAR=/opt/awscodepipeline/AWS-CodePipeline-POC.war
 OPTS="-Xmx256m"
-PID_PATH_NAME=/Users/akash/Documents/task/AWS-CodePipeline-POC-pid
+PID_PATH_NAME=/opt/awscodepipeline/AWS-CodePipeline-POC-pid
 case $1 in
     start)
         echo "Starting $SERVICE_NAME ..."
         if [ ! -f $PID_PATH_NAME ]; then
-            nohup java -jar /Users/akash/Documents/projects/AWS-CodePipeLine-POC/target/AWS-CodePipeline-POC.war > /Users/akash/Documents/task/AWS_CodeDeploy/nohup.txt & echo $! > /Users/akash/Documents/task/AWS-CodePipeline-POC-pid
+            nohup java -jar /opt/awscodepipeline/AWS-CodePipeline-POC.war > /opt/awscodepipeline/logs/service.log & echo $! > /opt/awscodepipeline/AWS-CodePipeline-POC-pid
             echo "$SERVICE_NAME started ..."
         else
             echo "$SERVICE_NAME is already running ..."
