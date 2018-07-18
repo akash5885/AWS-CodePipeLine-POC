@@ -3,10 +3,11 @@ os: linux
 files:
   - source: target/AWS-CodePipeline-POC.war
     destination: /opt/awscodepipeline
-  - source: service.sh
-    destination: /opt/awscodepipeline
 
 hooks:
+  BeforeInstall:
+    - location: stop.sh
+      timeout: 180
   ApplicationStart:
-    - location: restart.sh
+    - location: run.sh
       timeout: 180
