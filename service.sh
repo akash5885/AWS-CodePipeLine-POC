@@ -20,7 +20,7 @@ case $1 in
     start)
         echo "Starting $SERVICE_NAME ..."
         if [ ! -f $PID_PATH_NAME ]; then
-        	nohup java -jar /opt/awscodepipeline/AWS-CodePipeline-POC.war > /opt/awscodepipeline/AWS-CodePipeline-POC.war/logs/service.log & echo $! > /opt/awscodepipeline/AWS-CodePipeline-POC-pid &
+        	nohup java -jar /opt/awscodepipeline/AWS-CodePipeline-POC.war > /opt/awscodepipeline/logs/service.log & echo $! > /opt/awscodepipeline/AWS-CodePipeline-POC-pid &
             echo "$SERVICE_NAME started ..."
         else
             echo "$SERVICE_NAME is already running ..."
